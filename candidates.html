@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Online Voting System - Candidates</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #fff7ed;
+    margin: 20px;
+}
+
+h2 {
+    color: #9a3412;
+}
+
+form {
+    background: #ffedd5;
+    padding: 15px;
+    width: 420px;
+    border-radius: 10px;
+}
+
+input, button {
+    display: block;
+    width: 95%;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #9a3412;
+}
+
+button {
+    background: #ea580c;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c2410c;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th {
+    background: #ea580c;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #ea580c;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background: #ffedd5;
+}
+</style>
+<script>
+function validateForm() {
+    let name = document.forms["candidateForm"]["name"].value;
+    let party = document.forms["candidateForm"]["party"].value;
+    if (name === "" || party === "") {
+        alert("All fields are required.");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<h2>🧑‍💼 Candidates</h2>
+
+<form name="candidateForm" onsubmit="return validateForm()">
+    <input type="text" name="name" placeholder="Candidate Name">
+    <input type="text" name="party" placeholder="Political Party">
+    <button type="submit">Add Candidate</button>
+</form>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Party</th>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Alex Reyes</td>
+    <td>Unity Party</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>Jamie Cruz</td>
+    <td>Progressive Alliance</td>
+</tr>
+</table>
+
+</body>
+</html>
