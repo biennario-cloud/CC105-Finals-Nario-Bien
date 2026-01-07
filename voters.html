@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Online Voting System - Voters</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #e8f0ff;
+    margin: 20px;
+}
+
+h2 {
+    color: #1e3a8a;
+}
+
+form {
+    background: #dbeafe;
+    padding: 15px;
+    width: 420px;
+    border-radius: 10px;
+}
+
+input, button {
+    display: block;
+    width: 95%;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #1e3a8a;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th {
+    background: #2563eb;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #2563eb;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background: #eff6ff;
+}
+</style>
+<script>
+function validateForm() {
+    let name = document.forms["voterForm"]["name"].value;
+    let email = document.forms["voterForm"]["email"].value;
+    if (name === "" || email === "") {
+        alert("All fields are required.");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<h2>🗳️ Voters</h2>
+
+<form name="voterForm" onsubmit="return validateForm()">
+    <input type="text" name="name" placeholder="Voter Name">
+    <input type="email" name="email" placeholder="Voter Email">
+    <button type="submit">Add Voter</button>
+</form>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Juan Dela Cruz</td>
+    <td>juan@email.com</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>Maria Santos</td>
+    <td>maria@email.com</td>
+</tr>
+</table>
+
+</body>
+</html>
